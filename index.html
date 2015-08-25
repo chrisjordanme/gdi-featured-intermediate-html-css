@@ -154,10 +154,9 @@
                 <h2>Tonight:</h2>
                 <ul>
                     <li>Pseudo Classes & Elements</li>
-                    <li>CSS Organization & Methodologies</li>
+                    <li>CSS Housekeeping</li>
                     <li>Sass & Less</li>
                     <li>Parallax</li>
-                    <li>CMS / WordPress</li>
                     <li>Course Review</li>
                 </ul>
             </section>
@@ -174,117 +173,319 @@
             </section>
 
             <section>
-                <h3>Pseudo Class</h3>
+                <h3>Pseudo Classes</h3>
                 <p>Specifies the special state of an element</p>
-            </section>
-
-            <section>
-                <h3>Pseudo Element</h3>
-                <p>Allow you to style certain parts of the document</p>
+                <pre><code class="css">
+                    nav:hover {
+                        background-color: red;
+                    }
+                </code></pre>
             </section>
 
             <section>
                 <h3>:hover</h3>
                 <p>Activates styles for hover</p>
-                <code>
-                    .name:hover {
-                            color: red;
-                        }
+                <pre><code class="css">
+                    nav li a:hover {
+                        background: #e5e5e5;
+                    }
+                </code></pre>
+            </section>
 
-                </code>
-            </section>            <section>
+            <section>
                 <h3>:focus</h3>
-            </section>            <section>
+                <p>Activates styles for focus</p>
+               <pre><code class="css">
+                   nav li a:focus {
+                       background: green;
+                   }
+               </code></pre>
+            </section>
+
+
+            <section>
+                <h3>:active</h3>
+                <p>Activates styles for the "active" state</p>
+               <pre><code class="css">
+                   nav:active {
+                     color: red;
+                   }
+               </code></pre>
+            </section>
+
+            <section>
+                <h3><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">Click here for the Pseudo Class Reference</a></h3>
+            </section>
+
+
+            <section>
+                <h3>Pseudo Elements</h3>
+                <p>Allow you to style certain parts of the document</p>
+                <pre><code class="css">
+                    nav ul li:first-child a {
+                        color: blue;
+                    }
+                </code></pre>
+            </section>
+
+            <section>
                 <h3>:first-child</h3>
-            </section>            <section>
+                <p>Style the first child element</p>
+                <pre><code class="css">
+                    nav ul li:first-child a {
+                        color: blue;
+                    }
+                </code></pre>
+            </section>
+
+            <section>
                 <h3>:last-child</h3>
-            </section><section>
-                <h3>:nth-child()</h3>
-            </section><section>
-                <h3>:last-child</h3>
+                <p>Style the last child element</p>
+                <pre><code class="css">
+                    nav ul li a:last-child {
+                        text-transform: uppercase;
+                    }
+                </code></pre>
+            </section>
+
+            <section>
+                <h3>:nth-child('x')</h3>
+                <p>Every other 'x'. See the reference for details.</p>
+                <pre><code class="css">
+                    nav ul li:nth-child(odd) a {
+                        background-color: purple;
+                    }
+                </code></pre>
             </section>
 
 
             <section data-background="#f05b62">
-                <h1 style="color: #fafafa;">Pseudo Elements</h1>
+                <h1 style="color: #fafafa;">Los Favoritos</h1>
+            </section>
+
+            <section>
+                <h3>:before</h3>
+                <p>Creates a Pseudo-element before the first child of the matched set of elements. (MDN)</p>
+                <pre><code class="css">
+                    header:before {
+                        content: 'Hello';
+                    }
+                </code></pre>
             </section>
             <section>
-                <h3>::before</h3>
+                <h3>:after</h3>
+                <p>Matches a virtual last child of the selected element. (MDN)</p>
+                <pre><code class="css">
+                    header:after {
+                        content: 'After';
+                    }
+                </code></pre>
             </section>
-            <section>
-                <h3>::after</h3>
+
+            <section data-background="#f05b62">
+                <h1 style="color: #fafafa;">¿por qué son tus favoritos?</h1>
+                <h4 style="color: #fafafa;">(Why are those your favorites?)</h4>
             </section>
+
             <section>
-                <h3>::first-letter</h3>
+                <h3>Use :before & :after to create custom inputs</h3>
+                <a href="http://www.inserthtml.com/demos/css/radio-buttons/">Input Examples</a>
             </section>
+
             <section>
-                <h3>::first-line</h3>
+                <h3>A better way to clear floats!</h3>
+                <p>Remember the session 1 talk about clearing floats?</p>
+                <pre><code class="css">
+                    .clearfix:after {
+                        content: "";
+                        visibility: hidden;
+                        display: block;
+                        height: 0;
+                        clear: both;
+                    }
+                </code><code class="html">
+                    <div class="my-div clearfix">
+                        <div>Container</div>
+                        <p>Lorem Ipsum</p>
+                    </div>
+                </code></pre>
+            </section>
+
+            <section>
+                <h3><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">Click here for the Pseudo Element Reference</a></h3>
             </section>
 
 
 
 
             <section data-background="#f05b62">
-                <h1 style="color: #fafafa;">CSS Organization Tips</h1>
+                <h1 style="color: #fafafa;width: 1024px;">CSS Housekeeping</h1>
             </section>
             <section>
                 <h3>Namespacing CSS</h3>
-                <p>Not really a thing. But it really should be. Namespacing allows us to avoid conflicts with other plugins and libraries.</p>
-                <ul>
-                    <li>main-nav</li>
-                    <li><strong>gdi</strong>-main-nav</li>
-                </ul>
+                <p>Not really a thing. But it really should be. Namespacing allows us to avoid conflicts with plugins and libraries.</p>
+                <br/>
+                <p><strong>gdi</strong>-main-nav</p>
             </section>
+
             <section>
                 <h3>Punctuation</h3>
-                <ul>
-                    <li>Good</li>
-                        <ul>
-                            <li>gdi-main</li>
-                            <li></li>
-                        </ul>
-                    <li>Bad</li>
-                        <ul>
-                            <li>main</li>
-                        </ul>
-                </ul>
+                <p>HTML/CSS should be dash-cased</p>
+                <p><strong>gdi-main-nav</strong></p>
             </section>
 
             <section>
                 <h3>Object Oriented CSS (OOCSS)</h3>
                 <p>Separate structure from skin</p>
+                <a href="https://github.com/stubbornella/oocss/wiki">Github Link from Nicole Sullivan</a>
             </section>
             <section>
                 <h3>SMACSS (Scalable and Modular Architecture for CSS)</h3>
+                <img src="images/smcss-covers.png" alt=""/>
             </section>
             <section>
-                <h3>Categorization</h3>
+                <h3>SMCSS Promotes Categorization</h3>
                 <ul>
-                    <li>Base - Defaults</li>
-                    <li>Layout - Columns, etc.</li>
-                    <li>Module - Modular parts of the design. Callouts, sidebars, etc.</li>
-                    <li>State - Large, Small, Active, Inactive</li>
-                    <li>Theme - Less common, but allows us to change the look of a section</li>
+                    <li><strong>Base</strong> - Defaults</li>
+                    <li><strong>Layout</strong> - Columns, etc.</li>
+                    <li><strong>Module</strong> - Modular parts of the design. Callouts, sidebars, etc.</li>
+                    <li><strong>State</strong> - Large, Small, Active, Inactive</li>
+                    <li><strong>Theme</strong> - Less common, but allows us to change the look of a section</li>
                 </ul>
             </section>
 
             <section data-background="#f05b62">
-                <h1 style="color: #fafafa;">Sass & Less</h1>
+                <h1 style="color: #fafafa;width: 1024px;">CSS Preprocessors</h1>
             </section>
 
             <section>
-                <h2>Semantics</h2>
+                <h2>LESS &amp; SASS</h2>
+                <p>These are two very popular CSS preprocessors</p>
+            </section>
+            <section>
+                <h2>What the what is a CSS Preprocessor?</h2>
+                <p>CSS preprocessors take code written in the preprocessed language and then convert that code into the same old css we’ve been writing for years.</p>
+                <p>Since we're not writing straight CSS, we're not limited to the restrictions of the language.</p>
+            </section>
+            <section>
+                <h2>What they do</h2>
+                <ul>
+                    <li><strong>Mixins – </strong>Classes for classes.</li>
+                    <li><strong>Parametric mixins – </strong>Classes to which you can pass parameters, like functions.</li>
+                    <li><strong>Nested Rules – </strong>Classes within classes, which cut down on repetitive code</li>
+                    <li><strong>Operations – </strong>Math within CSS</li>
+                    <li><strong>Color functions – </strong>Edit your colors</li>
+                    <li><strong>Namespaces – </strong>Groups of styles that can be called by references</li>
+                    <li><strong>Scope – </strong>Make local changes to styles</li>
+                    <li><strong>JavaScript evaluation – </strong>JavaScript expressions evaluated in CSS</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Some highlights</h2>
+                <p>Mixins!</p>
+<pre><code>/* LESS */ .rounded-corners (@radius: 5px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -ms-border-radius: @radius;
+    -o-border-radius: @radius;
+    border-radius: @radius;
+    }
+
+    #footer {
+    .rounded-corners(10px);
+    }</code></pre>
+<pre><code>
+    /* Compiled CSS read by the browser */
+    #footer {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    }</code></pre>
+            </section>
+            <section>
+                <h2>Nested Rules</h2>
+<pre><code>// LESS
+
+    #header {
+    h1 {
+    font-size: 26px;
+    font-weight: bold;
+    }
+    p { font-size: 12px;
+    a { text-decoration: none;
+    &:hover { border-width: 1px }
+    }
+    }
+    }</code></pre>
+<pre><code>/* Compiled CSS */
+
+    #header h1 {font-size: 26px;font-weight: bold;}
+    #header p {font-size: 12px;}
+    #header p a {text-decoration: none;}
+    #header p a:hover {border-width: 1px;}</code></pre>
+
+            </section>
+            <section>
+                <h2>Functions</h2>
+                <p>LESS</p>
+<pre><code>p {
+    color: lighten(@base, 5%);
+    }</code></pre>
+                <p>SASS</p>
+<pre><code>p {
+    color: hsl($hue: 0, $saturation: 100%, $lightness: 50%);
+    }</code></pre>
+            </section>
+            <section>
+                <h2>Variables</h2>
+                <p>LESS</p>
+<pre><code>// LESS
+    @blue: #199FD9;
+    p {
+    color: @blue;
+    }
+    // Compiled CSS
+    p {
+    color: #199FD9;
+    }</code></pre>
+                <p>SASS</p>
+<pre><code>// SASS
+    $blue: #199FD9;
+    p {
+    color: $blue;
+    }
+    // Compiled CSS
+    p {
+    color: #199FD9;
+    }</code></pre>
             </section>
 
 
+
+
             <section data-background="#f05b62">
-                <h1 style="color: #fafafa;">CSS Tricks</h1>
+                <h1 style="color: #fafafa;">Parallax</h1>
+            </section>
+
+            <section>
+                <h3>CSS-Only Parallax Tutorial</h3>
+                <a href="http://keithclark.co.uk/articles/pure-css-parallax-websites/">Parallax</a>
+            </section>
+
+
+
+
+
+            <section data-background="#f05b62">
+                <h1 style="color: #fafafa;">Other CSS Tips</h1>
             </section>
 
             <section>
                 <ul>
                     <li>CSS Shorthand</li>
-                    <li>Absolute Positioning</li>
+                    <li>Absolute vs. Relative Positioning</li>
                     <li>Text-Transform</li>
                     <li>Text-Decoration</li>
                     <li>word-wrap</li>
@@ -294,191 +495,10 @@
             </section>
 
             <section data-background="#f05b62">
-                <h1 style="color: #fafafa;">Parallax</h1>
-            </section>
-
-            <section data-background="#f05b62">
-                <h1 style="color: #fafafa;">Questions</h1>
-                <ul>
-                    <li>CMS</li>
-                </ul>
+                <h1 style="color: #fafafa;">Course Review & Questions</h1>
             </section>
 
 
-            <section data-background="#f05b62">
-                <h1 style="color: #fafafa;">Course Review</h1>
-            </section>
-
-
-
-
-
-
-
-            <section>
-                <h3>Let's Develop It</h3>
-                <ul>
-                    <li>Use new HTML elements to layout the site</li>
-                    <li>Refer to the example design for hints</li>
-                </ul>
-            </section>
-
-
-
-
-
-
-
-
-
-
-
-
-            <section>
-                <h3>Develop It!</h3>
-                <ul>
-                    <li>Style the headline using the Descendant Selector</li>
-                    <li>If you have Illustrator or another program to modify .svg graphics, change the colors to match your site</li>
-                </ul>
-            </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <section>
-              <h2>LESS &amp; SASS?!</h2>
-              <p>These are two very popular CSS preprocessors</p>
-            </section>
-            <section>
-              <h2>What the what is a CSS Preprocessor?</h2>
-              <p>CSS preprocessors take code written in the preprocessed language and then convert that code into the same old css we’ve been writing for years.</p>
-              <p>Since we're not writing straight CSS, we're not limited to the restrictions of the language.</p>
-            </section> 
-            <section>
-              <h2>What they do</h2>
-              <ul>
-              <li><strong>Mixins – </strong>Classes for classes.</li>
-              <li><strong>Parametric mixins – </strong>Classes to which you can pass parameters, like functions.</li>
-              <li><strong>Nested Rules – </strong>Classes within classes, which cut down on repetitive code</li>
-              <li><strong>Operations – </strong>Math within CSS</li>
-              <li><strong>Color functions – </strong>Edit your colors</li>
-              <li><strong>Namespaces – </strong>Groups of styles that can be called by references</li>
-              <li><strong>Scope – </strong>Make local changes to styles</li>
-              <li><strong>JavaScript evaluation – </strong>JavaScript expressions evaluated in CSS</li>
-              </ul>
-            </section>
-            <section>
-              <h2>Some highlights</h2>
-              <p>Mixins!</p>
-<pre><code>/* LESS */ .rounded-corners (@radius: 5px) {
-  -webkit-border-radius: @radius;
-  -moz-border-radius: @radius;
-  -ms-border-radius: @radius;
-  -o-border-radius: @radius;
-  border-radius: @radius;
-}
-
-#footer {
-  .rounded-corners(10px);
-}</code></pre>
-<pre><code>
-  /* Compiled CSS read by the browser */
-  #footer {
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  border-radius: 10px;
-}</code></pre>
-  </section>
-  <section>
-    <h2>Nested Rules</h2>
-<pre><code>// LESS
-
-#header {
-  h1 {
-    font-size: 26px;
-    font-weight: bold;
-  }
-  p { font-size: 12px;
-    a { text-decoration: none;
-      &:hover { border-width: 1px }
-    }
-  }
-}</code></pre>
-<pre><code>/* Compiled CSS */
-
-#header h1 {font-size: 26px;font-weight: bold;}
-#header p {font-size: 12px;}
-#header p a {text-decoration: none;}
-#header p a:hover {border-width: 1px;}</code></pre>
-  
-          </section>
-          <section>
-            <h2>Functions</h2>
-            <p>LESS</p>
-<pre><code>p {
-  color: lighten(@base, 5%);
-}</code></pre>
-            <p>SASS</p>
-<pre><code>p {
-  color: hsl($hue: 0, $saturation: 100%, $lightness: 50%);
-}</code></pre>
-          </section>
-          <section>
-            <h2>Variables</h2>
-            <p>LESS</p>
-<pre><code>// LESS 
-@blue: #199FD9;
-p {
-    color: @blue;
-}
-// Compiled CSS
-p {
-  color: #199FD9;
-}</code></pre>
-<p>SASS</p>
-<pre><code>// SASS 
-$blue: #199FD9;
-p {
-    color: $blue;
-}
-// Compiled CSS
-p {
-  color: #199FD9;
-}</code></pre>
-</section>
         </div>
         <footer>
             <div class="copyright">

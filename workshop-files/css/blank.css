@@ -33,10 +33,59 @@ nav li a {
     text-decoration: none;
     color: #333;
 }
+
+/*nav li a:focus {*/
+/*background: green;*/
+/*}*/
+
+/*nav li a:active {*/
+/*color: red;*/
+/*}*/
+
 nav li a:hover {
     background: #e5e5e5;
 }
 
+/*nav ul li:first-child a {*/
+    /*color: blue;*/
+/*}*/
+
+/*nav ul li a:last-child {*/
+    /*text-transform: uppercase;*/
+/*}*/
+
+/*nav ul li a:first-letter {*/
+    /*text-transform: lowercase;*/
+/*}*/
+
+/*nav ul li:nth-child(odd) a {*/
+    /*background-color: purple;*/
+/*}*/
+
+/*header:before {*/
+    /*content: 'Before';*/
+/*}*/
+
+/*header:after {*/
+    /*content: 'After';*/
+/*}*/
+
+/*.my-div div {*/
+    /*float: left;*/
+/*}*/
+
+/*.my-div p {*/
+    /*float: left;*/
+    /*clear: left;*/
+/*}*/
+
+/*.clearfix:after {*/
+    /*content: "";*/
+    /*visibility: hidden;*/
+    /*display: block;*/
+    /*height: 0;*/
+    /*clear: both;*/
+/*}*/
 
 .dropdown #list {
     max-height: 0;
@@ -78,6 +127,7 @@ nav li a:hover {
     background-size: cover;
     height: 350px;
     padding: 25px 0;
+    /*background-attachment: fixed;*/
 }
 
 #hero img {
